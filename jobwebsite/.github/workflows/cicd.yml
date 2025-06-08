@@ -1,0 +1,19 @@
+name: CICD pipeline
+on:
+   push:
+      branches:
+         - main
+jobs:
+   deploy-to-server-01:
+   runs-on: ubuntu-latest
+   steps: 
+     -name: Checkout Code
+     uses: actions/setup-node@v3
+
+     -name: display the code
+     run: ls -la 
+     -name: display more stuffs
+     run: |
+        ls -la
+        hostnamectl
+        
